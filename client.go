@@ -10,7 +10,7 @@ import (
 	"net/url"
 	"strconv"
 	"strings"
-	"net/http/httputil"
+	//"net/http/httputil"
 
 	"golang.org/x/net/context"
 	"golang.org/x/oauth2"
