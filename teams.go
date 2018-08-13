@@ -9,6 +9,11 @@ func (t *Teams) List(role string) (interface{}, error) {
 	return t.c.execute("GET", urlStr, "")
 }
 
+func (t *Teams) Liste() (interface{}, error){
+	urlStr := t.c.requestUrl("/teams/")
+	return t.c.execute("GET", urlStr, "")
+}
+
 func (t *Teams) Profile(teamname string) (interface{}, error) {
 	urlStr := t.c.requestUrl("/teams/%s/", teamname)
 	return t.c.execute("GET", urlStr, "")
