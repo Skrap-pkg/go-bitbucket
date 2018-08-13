@@ -41,7 +41,7 @@ func (c *Client) Projects() ([]interface{}) {
 		panic(err)
 	}
 
-	/*var teams []string
+	var teams []string
     datas := res.(map[string]interface{})["values"].([]interface{})
     for i := 0; i < len(datas); i++{
         teams = append(teams, datas[i].(map[string]interface{})["username"].(string))
@@ -54,7 +54,7 @@ func (c *Client) Projects() ([]interface{}) {
 		}
 
 		allProjects = append(allProjects, projects)
-    }*/
+    }
     return allProjects
 
 }
