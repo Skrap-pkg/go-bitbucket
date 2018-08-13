@@ -10,7 +10,7 @@ func (t *Teams) List(role string) (interface{}, error) {
 }
 
 func (t *Teams) Liste() (interface{}, error){
-	urlStr := t.c.requestUrl("/teams/")
+	urlStr := t.c.requestUrl("/teams")
 	return t.c.execute("GET", urlStr, "")
 }
 
