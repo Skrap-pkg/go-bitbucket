@@ -32,7 +32,7 @@ func (u *Users) Repositories(t string) (interface{}, error) {
 	urlStr := GetApiBaseURL() + "/users/" + t + "/repositories"
 	return u.c.execute("GET", urlStr, "")
 }
-func (c *Client) Projects() ([]interface{}) {
+/*func (c *Client) Projects() ([]interface{}) {
 
 	var allProjects []interface{}
 	//List his teams
@@ -57,4 +57,4 @@ func (c *Client) Projects() ([]interface{}) {
     }
     return allProjects
 
-}
+}*/
