@@ -10,6 +10,7 @@ import (
 	"net/url"
 	"strconv"
 	"strings"
+	"net/hhtp/httputil"
 
 	"golang.org/x/net/context"
 	"golang.org/x/oauth2"
@@ -147,6 +148,15 @@ func (c *Client) execute(method string, urlStr string, text string) (interface{}
 	} else if c.Auth.token.Valid() {
 		c.Auth.token.SetAuthHeader(req)
 	}
+
+	//DEBUG
+	dump, err := httputil.DumpRequestOut(req, true)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Printf("%q", dump)
+	//
 
 	client := new(http.Client)
 	resp, err := client.Do(req)
