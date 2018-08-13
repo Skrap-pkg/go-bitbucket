@@ -86,6 +86,7 @@ type webhooks interface {
 
 type teams interface {
 	List(role string) (interface{}, error) // [WIP?] role=[admin|contributor|member]
+	Liste() (interface{}, error)
 	Profile(teamname string) (interface{}, error)
 	Members(teamname string) (interface{}, error)
 	Followers(teamname string) (interface{}, error)
