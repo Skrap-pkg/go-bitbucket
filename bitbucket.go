@@ -15,7 +15,7 @@ type users interface {
 	Followers(username string) (interface{}, error)
 	Following(username string) (interface{}, error)
 	Repositories(username string) (interface{}, error)
-	//Projects() ([]interface{})
+	Projects() ([]interface{})
 }
 
 type user interface {
