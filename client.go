@@ -150,12 +150,12 @@ func (c *Client) execute(method string, urlStr string, text string) (interface{}
 	}
 
 	//DEBUG
-	dump, err := httputil.DumpRequestOut(req, true)
+	/*dump, err := httputil.DumpRequestOut(req, true)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Printf("%q", dump)
+	fmt.Printf("%q", dump)*/
 	//
 
 	client := new(http.Client)
